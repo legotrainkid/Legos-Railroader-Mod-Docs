@@ -2,9 +2,13 @@
 
 A libray mod that has a lot of useful tools and functions for modding. 
 
+Links to sections  
+[Adding Custom Components](https://github.com/legotrainkid/Legos-Railroader-Mod-Docs/edit/main/Library-Of-Stuff.md#adding-custom-components)
+[Runtime Editing of Definitions](https://github.com/legotrainkid/Legos-Railroader-Mod-Docs/blob/main/Library-Of-Stuff.md#utilizing-the-runtime-editing-of-definitions-red)  
+
 # Adding Custom Components
 
-To add a component, use the static method LibraryOfStuff.AddNewComponent(Type baseClass, string typeIdentifier, Type type, IComponentBuilder builder)   
+To add a component, use the static method `LibraryOfStuff.AddNewComponent(Type baseClass, string typeIdentifier, Type type, IComponentBuilder builder)`   
 
 baseClass - typeof(Component)  
 typeIdentifier - Whatever you want to call your component, should match the one in your components JSON  
