@@ -31,7 +31,7 @@ Component Builder
 RED allows you to edit the definition files of rolling stock at runtime without actually changing the JSON files themselves. That means that game updtes won't override your files, and multiple mods can make changes without fighting each other.
 
 To start, create a folder to use as your project folder. Create an info.json file in it, and paste in this JSON code  
-```
+```json
 {
   "Id": "CHANGE THIS",
   "DisplayName": "CHANGE THIS",
@@ -43,7 +43,7 @@ To start, create a folder to use as your project folder. Create an info.json fil
 Then, create a folder called `LegosLibraryOfStuff`, and inside of that folder create another one called `Definitions`.  
 
 Now, inside the `Definitions` folder, create as many JSON files as you need (Each JSON file can only edit one definition). The JSON code will look like this  
-```
+```json
 {
     "identifier": "DEFINITION TO EDIT",
     "newIdentifier": "NEW DEFINITION'S ID (ONLY USED IF CLONING)",
