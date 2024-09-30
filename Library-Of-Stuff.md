@@ -48,6 +48,7 @@ Now, inside the `Definitions` folder, create as many JSON files as you need (Eac
     "identifier": "DEFINITION TO EDIT",
     "newIdentifier": "NEW DEFINITION'S ID (ONLY USED IF CLONING)",
     "clone": true,
+    "cloneDefault": false,
     "name": "DISPLAY NAME FOR THE ROLLING STOCK, LEAVE EMPTY TO KEEP THE CURRENT NAME (UNLESS CLONING)",
     "description": "NEW DESCRIPTION, KEEP EMPTY TO USE CURRENT ONE (UNLESS CLONING)",
     "price": -1,
