@@ -89,6 +89,10 @@ The new identifier for the object to use, required if cloning, will be ignored o
 
 Whether or not the edits should take place on the current definition, or it should be copied and the edits made there
 
+## cloneDefault (Optional, default = false)
+
+Whether or not to use the unedited base game definition, or to use the potentially edited one in use. Only applies when cloning a definition
+
 ## name (Optional, Required if cloning)
 
 The display name for the rolling stock. Leave empty to keep the current one (If you aren't cloning it, otherwise you need a name)
