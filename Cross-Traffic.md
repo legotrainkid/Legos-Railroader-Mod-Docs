@@ -5,7 +5,7 @@ To add your own car/load combinations, either edit the file in `your_path_to_mod
 If you want to add a crosstraffic load to an existing mod, simply add `legotrainman.crosstraffic` to your mod's requirements, then create a folder called `CrossTrafficLoads`, with the `CarLoads.json` file inside it.
 
 Example Json
-```
+```json
 [
   {
   "carType": "ARR CAR CODE (EG, FM* for any flat car, HMR for a covered hopper",
