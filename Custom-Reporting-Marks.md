@@ -29,7 +29,7 @@ To add custom reporting marks, make or use an existing UMM mod, and add a new fo
 
 ## identifier
 
-The car's identifier you want to force a reporting mark on.
+The car's object identifier (Not the model identifier) you want to force a reporting mark on.
 
 ## reportingMarks
 
