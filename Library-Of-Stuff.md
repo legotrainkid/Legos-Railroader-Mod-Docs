@@ -52,7 +52,13 @@ Now, inside the `Definitions` folder, create as many JSON files as you need (Eac
     "name": "DISPLAY NAME FOR THE ROLLING STOCK, LEAVE EMPTY TO KEEP THE CURRENT NAME (UNLESS CLONING)",
     "description": "NEW DESCRIPTION, KEEP EMPTY TO USE CURRENT ONE (UNLESS CLONING)",
     "price": -1,
-    "tenderIdentifier": "NEW TENDER IDENTIFIER (LEAVE BLANK FOR UNCHANGED, ONLY APPLIES TO STEAM LOCOMOTIVES)"
+    "tenderIdentifier": "NEW TENDER IDENTIFIER (LEAVE BLANK FOR UNCHANGED, ONLY APPLIES TO STEAM LOCOMOTIVES)",
+    "positionTail": -100.0,
+    "pistonDiameterInches": 0.0,
+    "pistonStrokeInches": 0.0,
+    "maximumBoilerPressure": 0.0,
+    "totalHeatingSurface": 0.0,
+    "weightOnDrivers": 0.0,
     "removes": [
         {
             "kind": "COMPONENT KIND",
@@ -68,13 +74,21 @@ Now, inside the `Definitions` folder, create as many JSON files as you need (Eac
             "replace": true,
             "component": {
                 PASTE YOUR COMPONENT JSON HERE
+              }
         },
         {
             "replace": true,
             "component": {
                 PASTE YOUR COMPONENT JSON HERE
+              }
         }
-    ]
+    ],
+  "bulkAdds": [
+    PASTE YOUR COMPONENTS HERE
+  ],
+  "newLoads": [
+    PASTE YOUR LOAD SLOTS HERE
+  ]
 }
 ```
 
@@ -110,6 +124,18 @@ The new price for the rolling stock. -1 keeps the same price, 0 means it is not 
 
 The identifier of the tender to use with the locomotive, leave empty for unchanged
 
+## positionTail (Optional, only applies to definitions with kind `SteamLocomotive`, default = -100)
+
+The distance the tender will be from the locomotive
+
+## pistonDiameterInches, pistonStrokeInches, maximiumBoilerPressure, totalHeatingSurface (Optional, only applies to steam locomotives, default = 0)
+
+Used to change the tractive effort on steam locomotives
+
+## weightOnDrivers (Optional, only applies to steam locomotives, default = 0)
+
+Used to change the factor of adhesion on steam locomotives
+
 ## removes (Optional)
 
 The components to remove from the definition. Only removes them if kind and name match.
@@ -118,4 +144,14 @@ The components to remove from the definition. Only removes them if kind and name
 
 The components to add to the definition. If replace is true it will remove any components that have the same name and kind as the added component
 
+## bulkAdds (Optional)
 
+A slightly easier to use version of adds, just paste in all the components you want to add to the list. DOES NOT TAKE DUPLICATES INTO ACCOUNT
+
+## newLoads (Optional)
+
+Will replace the load slots on the locomotives with this list
+
+# The Attribute Modifier Component
+
+The attribute moddifier component allows you to adjust the wear, oil use, water, coal, and diesel consumption of locomotives. Simply add it in the editor, adjust the values to your liking (1 = default), and use RED to apply and distribute it as a mod!
