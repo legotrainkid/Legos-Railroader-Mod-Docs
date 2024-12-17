@@ -5,6 +5,7 @@ A libray mod that has a lot of useful tools and functions for modding.
 Links to sections  
 [Adding Custom Components](https://github.com/legotrainkid/Legos-Railroader-Mod-Docs/edit/main/Library-Of-Stuff.md#adding-custom-components)  
 [Runtime Editing of Definitions](https://github.com/legotrainkid/Legos-Railroader-Mod-Docs/blob/main/Library-Of-Stuff.md#utilizing-the-runtime-editing-of-definitions-red)  
+[The Attribute Modifier Component](https://github.com/legotrainkid/Legos-Railroader-Mod-Docs/blob/main/Library-Of-Stuff.md#the-attribute-modifier-component)
 
 # Adding Custom Components
 
