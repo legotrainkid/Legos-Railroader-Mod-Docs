@@ -47,6 +47,7 @@ Now, inside the `Definitions` folder, create as many JSON files as you need (Eac
 ```json
 {
     "identifier": "DEFINITION TO EDIT",
+    "CarType": "SET A NEW CAR TYPE HERE (OPTIONAL, LEAVE EMPTY TO KEEP THE SAME ONE)"
     "newIdentifier": "NEW DEFINITION'S ID (ONLY USED IF CLONING)",
     "clone": true,
     "cloneDefault": false,
@@ -60,6 +61,7 @@ Now, inside the `Definitions` folder, create as many JSON files as you need (Eac
     "maximumBoilerPressure": 0.0,
     "totalHeatingSurface": 0.0,
     "weightOnDrivers": 0.0,
+    "weightEmpty": 0,
     "removes": [
         {
             "kind": "COMPONENT KIND",
@@ -109,6 +111,10 @@ Whether or not the edits should take place on the current definition, or it shou
 
 Whether or not to use the unedited base game definition, or to use the potentially edited one in use. Only applies when cloning a definition
 
+## CarType (Optional, default = "")
+
+What the cartype should be changed to, leave blank if you don't want to change it
+
 ## name (Optional, Required if cloning)
 
 The display name for the rolling stock. Leave empty to keep the current one (If you aren't cloning it, otherwise you need a name)
@@ -136,6 +142,10 @@ Used to change the tractive effort on steam locomotives
 ## weightOnDrivers (Optional, only applies to steam locomotives, default = 0)
 
 Used to change the factor of adhesion on steam locomotives
+
+## weightEmpty (Optional, default = 0)
+
+Changes the empty weight of a car, 0 leaves it unchanged
 
 ## removes (Optional)
 
