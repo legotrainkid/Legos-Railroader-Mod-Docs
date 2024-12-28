@@ -2,6 +2,7 @@
 A collection of all the documentation for my railroader mods
 
 ## Documentation Links
+[Logo's and Deco](https://github.com/legotrainkid/Legos-Railroader-Mod-Docs/blob/main/LogosAndDeco.md#legos-logos-and-decos)
 [Custom Passenger Bonus](https://github.com/legotrainkid/Legos-Railroader-Mod-Docs/blob/main/Custom-Passenger-Bonus.md#legos-custom-passenger-bonus)  
 [Library of Stuff](https://github.com/legotrainkid/Legos-Railroader-Mod-Docs/blob/main/Library-Of-Stuff.md#legos-library-of-stuff)  
 [Cross Traffic](https://github.com/legotrainkid/Legos-Railroader-Mod-Docs/blob/main/Cross-Traffic.md#legos-cross-traffic)  
