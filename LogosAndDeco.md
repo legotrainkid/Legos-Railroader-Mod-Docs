@@ -53,6 +53,16 @@ Using the text boxes is also pretty easy, position them to same way as the other
 A note for all components. They work using a unity system called decal projecters, with will "project" onto whatever surfaces are in the bounding box. They project in the direction of the blue arrow, and I have noticed some weird shader atrifacts may happen if the texture is being projected the wrong way. It will also flip text and images if oriented wrong.
 ![image](https://github.com/user-attachments/assets/3eb508a6-2bc2-46e5-b2e8-90bb4298fd23)
 
+## 1.1.0 Update
+
+There are 2 new values added in this update, Priority and ColorLevel
+
+Priority tells Unity what order to render the decals in. Lower numbers (below 0) will be rendered first, higher numbers will be rendered last. Lettering will always be priority 0. 
+Decals with the same priority will be rendered in an upredictable order
+
+ColorLevel is the new system for telling the ColorPainter and ColorableImage what color to use. There are now 6 total colors, the 2 base game colors, and 4 new ones. The new ones start at 0, and the last one is 3
+The base game colors are -1 (Base) and -2 (Lettering).
+
 
 # Packaging the Mod
 
