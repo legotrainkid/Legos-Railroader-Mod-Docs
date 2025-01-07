@@ -63,6 +63,31 @@ Decals with the same priority will be rendered in an upredictable order
 ColorLevel is the new system for telling the ColorPainter and ColorableImage what color to use. There are now 6 total colors, the 2 base game colors, and 4 new ones. The new ones start at 0, and the last one is 3
 The base game colors are -1 (Base) and -2 (Lettering).
 
+## Using Component Groups (Added in Library of Stuff V-1.4.0)
+
+To add a component group, simply change the Runtime Editing of Definnitions JSON to create one instead of cloning the locomotive:
+
+Old:
+```json
+{
+    "identifier": "ne-caboose02",
+    "clone": false,
+	  "MakeComponentGroup": true,
+	  "GroupName": "Lego's Custom",
+	  "GroupID": "lego-custom",
+    "bulkAdds": [
+```
+
+New:
+```json
+{
+    "identifier": "ne-caboose02",
+    "clone": false,
+    "MakeComponentGroup": true,
+    "GroupName": "Lego's Custom",
+    "GroupID": "lego-custom",
+    "bulkAdds": [
+```
 
 # Packaging the Mod
 
