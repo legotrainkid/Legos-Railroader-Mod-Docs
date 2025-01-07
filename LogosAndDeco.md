@@ -71,10 +71,11 @@ Old:
 ```json
 {
     "identifier": "ne-caboose02",
-    "clone": false,
-	  "MakeComponentGroup": true,
-	  "GroupName": "Lego's Custom",
-	  "GroupID": "lego-custom",
+    "newIdentifier": "ne-caboose02-legos-custom",
+    "name": "Early Steel Caboose (Lego's Custom Paint)",
+    "description": "An early steel caboose with a custom paint scheme",
+    "clone": true,
+    "cloneDefault": true,
     "bulkAdds": [
 ```
 
