@@ -130,7 +130,13 @@ into these
     "bulkAdds": [
         etc.
 ```
+Then, make sure none of the components in each component group share the same name (They can have the same names as those in other component groups though)
 
+EG. you cannot have multiple components called CustomTextbox 1
+
+If any components fail to deactivate when testing your mod, it means they share the same name as something else. 
+
+Once all your components are uniquely named, you can zip it up and share it!
 
 
 # LIST OF COMPONENTS
