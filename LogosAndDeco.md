@@ -101,6 +101,37 @@ Copy and paste the components into the square brackets after bulkAdds, and make 
 you can use a free website like JSONLINT, which will format it nicely for you as well. Once you save and zip up your mod, it is ready to share!
 ![image](https://github.com/user-attachments/assets/7e4e8296-dfad-441a-a6be-ef0fc4b93128)
 
+# Converting an old livery mod to use the new component groups
+
+The conversion process is very easy. First, open up each JSON file for the liveries in your mod (in YOUR MOD FOLDER/LibraryOfStuff/Definitions/)
+
+Then, at the top, change these line
+```json
+{
+    "identifier": "VANILLA IDENTIFIER",
+    "newIdentifier": "YOUR CUSTOMLIVERY IDENTIFIER",
+    "name": "SOME NAME",
+    "description": "SOME DESCRIPTION",
+    "clone": true,
+    "cloneDefault": true,
+    "bulkAdds": [
+        etc.
+```
+
+into these
+
+```json
+{
+    "identifier": "VANILLA IDENTIFIER",
+    "clone": false,
+    "MakeComponentGroup": true,
+    "GroupName": "DISPLAY NAME FOR YOUR LIVERY (WILL APPEAR ON CUSTOMIZATION MENU",
+    "GroupID": "UNIQUE ID FOR YOUR LIVERy (No spaces or special characters, other than dashes/underscores)",
+    "bulkAdds": [
+        etc.
+```
+
+
 
 # LIST OF COMPONENTS
 
