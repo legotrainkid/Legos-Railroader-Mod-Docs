@@ -54,6 +54,8 @@ Now, inside the `Definitions` folder, create as many JSON files as you need (Eac
     "name": "DISPLAY NAME FOR THE ROLLING STOCK, LEAVE EMPTY TO KEEP THE CURRENT NAME (UNLESS CLONING)",
     "description": "NEW DESCRIPTION, KEEP EMPTY TO USE CURRENT ONE (UNLESS CLONING)",
     "price": -1,
+    "truckIdentifier": "",
+    "baseRoadNumber": "",
     "tenderIdentifier": "NEW TENDER IDENTIFIER (LEAVE BLANK FOR UNCHANGED, ONLY APPLIES TO STEAM LOCOMOTIVES)",
     "positionTail": -100.0,
     "pistonDiameterInches": 0.0,
@@ -62,6 +64,7 @@ Now, inside the `Definitions` folder, create as many JSON files as you need (Eac
     "totalHeatingSurface": 0.0,
     "weightOnDrivers": 0.0,
     "weightEmpty": 0,
+    "publishedTractiveEffort": -1,
     "removes": [
         {
             "kind": "COMPONENT KIND",
@@ -127,6 +130,14 @@ The description for the rolling stock. Leave empty to keep the current one (If y
 
 The new price for the rolling stock. -1 keeps the same price, 0 means it is not puchasable.  
 
+## truckIdentifier (Optional, default = "")
+
+The identifier for the trucks to use. Only applies to diesel and rolling stock
+
+## baseRoadNumber (Optional, default = "")
+
+The starting road number for the equipment. Not sure why it's a string but it's what the game uses. Just make sure to put the number in the quotes.
+
 ## tenderIdentifier (Optional, only applies to definitions with kind `SteamLocomotive`)
 
 The identifier of the tender to use with the locomotive, leave empty for unchanged
@@ -146,6 +157,11 @@ Used to change the factor of adhesion on steam locomotives
 ## weightEmpty (Optional, default = 0)
 
 Changes the empty weight of a car, 0 leaves it unchanged
+
+## publishedTractiveEffort (Option, default = -1, Steam Locomotives Only)
+
+The tractive effort to display in the buy menu, not the actual tractive effort. Use -1 to keep the same, 0 to use whatever is calculated from the definition values. 
+Other numbers will be displayed as normal in the menu
 
 ## removes (Optional)
 
