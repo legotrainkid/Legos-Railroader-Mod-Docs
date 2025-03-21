@@ -55,6 +55,7 @@ Now, inside the `Definitions` folder, create as many JSON files as you need (Eac
     "description": "NEW DESCRIPTION, KEEP EMPTY TO USE CURRENT ONE (UNLESS CLONING)",
     "price": -1,
     "truckIdentifier": "",
+    "truckSeperation": -1,
     "baseRoadNumber": "",
     "tenderIdentifier": "NEW TENDER IDENTIFIER (LEAVE BLANK FOR UNCHANGED, ONLY APPLIES TO STEAM LOCOMOTIVES)",
     "positionTail": -100.0,
@@ -133,6 +134,10 @@ The new price for the rolling stock. -1 keeps the same price, 0 means it is not 
 ## truckIdentifier (Optional, default = "")
 
 The identifier for the trucks to use. Only applies to diesel and rolling stock
+
+## truckSeperation (Optional, default = -1)
+
+The distance between trucks. Only applies to diesel and rolling stock
 
 ## baseRoadNumber (Optional, default = "")
 
