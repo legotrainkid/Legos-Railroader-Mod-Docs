@@ -53,15 +53,40 @@ Using the text boxes is also pretty easy, position them to same way as the other
 A note for all components. They work using a unity system called decal projecters, with will "project" onto whatever surfaces are in the bounding box. They project in the direction of the blue arrow, and I have noticed some weird shader atrifacts may happen if the texture is being projected the wrong way. It will also flip text and images if oriented wrong.
 ![image](https://github.com/user-attachments/assets/3eb508a6-2bc2-46e5-b2e8-90bb4298fd23)
 
-## 1.1.0 Update
+## Decal Priority
 
-There are 2 new values added in this update, Priority and ColorLevel
-
-Priority tells Unity what order to render the decals in. Lower numbers (below 0) will be rendered first, higher numbers will be rendered last. Lettering will always be priority 0. 
+Priority tells Unity what order to render the decals in. Lower numbers (including below 0) will be rendered first, higher numbers will be rendered last. Lettering will always be priority 0. 
 Decals with the same priority will be rendered in an upredictable order
 
-ColorLevel is the new system for telling the ColorPainter and ColorableImage what color to use. There are now 6 total colors, the 2 base game colors, and 4 new ones. The new ones start at 0, and the last one is 3
-The base game colors are -1 (Base) and -2 (Lettering).
+## ColorID
+
+The new color ID system allows for an infinite number of color slots to be used and applied to a piece of rolling stock. IDs are case sensitive, however, they will all be forced into uppercase in the customize window. Color IDs will automaticly be copied to coupled. Use `base` and `lettering` to use the vanilla colors. The old colorLevel and useSecondary values are no loger used or supported.
+
+## Smoothness
+
+There is a new smoothness value for all color and image shaders. This value will specifiy how shiny the decal will be. Anything that uses the `base` color will inherit the smoothness of the value underneath (like previous versions of the mod). This means that properly patching over text is now possible.
+
+## Custom/Set Text Box 
+
+### ID
+
+The ID is used in a similar system to the ColorID system. Any text boxes that share the same ID with have their fonts and text sync. Set Text boxes will sync fonts with matching IDs, but not text
+
+### Font
+
+This allows you to specify a default font for the text box (EG. Default for the vanilla)
+
+### Default Text
+
+Allows you to specify a default value for the text box
+
+### Copy to Coupled 
+
+Specifies whether the ID will be copied to other cars in the consist
+
+## Default Liveries
+
+This system allows you to setup a preset selection of colors, text, and font to apply to a locomotive (It does not handle component groups, they must be manually applied). Simply set the ID and value for each.
 
 ## Using Component Groups (Added in Library of Stuff V-1.4.0)
 
@@ -96,41 +121,12 @@ Now that your livery is done, it’s time to package it up into a mod you can sh
 so that you don’t have to worry about files being overwritten or showing people where to put the folder. All you have to do is make a UMM mod, and do some extra setup with the files. 
 In the mod template project there is a example-clone.json file you can use as a template. First, change the identifier to be the identifier of the rolling stock you made a livery for. 
 Next, create a new identifier for the new object. The easiest way is to make it the vanilla id-the name for your livery (eg, ld-sw1-legos-2tone) . Keep in mind you cannot use spaces in the identifier. 
-Next, open up the definition for the rolling stock (in %appdata%\LocalLow\Giraffe Lab LLC\Railroader\AssetPacks) and scroll to the bottom to find all the components you just added for your livery. 
+Next, open up the definition for the rolling stock (in %localappdata%low\Giraffe Lab LLC\Railroader\AssetPacks) and scroll to the bottom to find all the components you just added for your livery. 
 Copy and paste the components into the square brackets after bulkAdds, and make sure you get all the curly brackets for the components. You may want to double check your JSON afterwards, 
 you can use a free website like JSONLINT, which will format it nicely for you as well. Once you save and zip up your mod, it is ready to share!
 ![image](https://github.com/user-attachments/assets/7e4e8296-dfad-441a-a6be-ef0fc4b93128)
 
-# Converting an old livery mod to use the new component groups
-
-The conversion process is very easy. First, open up each JSON file for the liveries in your mod (in YOUR MOD FOLDER/LibraryOfStuff/Definitions/)
-
-Then, at the top, change these line
-```json
-{
-    "identifier": "VANILLA IDENTIFIER",
-    "newIdentifier": "YOUR CUSTOMLIVERY IDENTIFIER",
-    "name": "SOME NAME",
-    "description": "SOME DESCRIPTION",
-    "clone": true,
-    "cloneDefault": true,
-    "bulkAdds": [
-        etc.
-```
-
-into these
-
-```json
-{
-    "identifier": "VANILLA IDENTIFIER",
-    "clone": false,
-    "MakeComponentGroup": true,
-    "GroupName": "DISPLAY NAME FOR YOUR LIVERY (WILL APPEAR ON CUSTOMIZATION MENU",
-    "GroupID": "UNIQUE ID FOR YOUR LIVERy (No spaces or special characters, other than dashes/underscores)",
-    "bulkAdds": [
-        etc.
-```
-Then, make sure none of the components in each component group share the same name (They can have the same names as those in other component groups though)
+Make sure none of the components in each component group share the same name (They can have the same names as those in other component groups though)
 
 EG. you cannot have multiple components called CustomTextbox 1
 
@@ -150,3 +146,7 @@ Once all your components are uniquely named, you can zip it up and share it!
 ## Set Text
 
 ## Custom Text
+
+## Material Colorizer
+
+## Default Livery
