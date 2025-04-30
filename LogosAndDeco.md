@@ -1,5 +1,11 @@
 # Lego's Logos and Decos 
 
+# FONTS
+
+Any .ttf fonts will work with this mod, simply put them in a folder called `Fonts` inside any UMM mod and they will be loaded (There is already an folder in the logos and deco mod folder that can be used).
+
+Please make sure you have distribution rights for a font before you bundle it up with a mod
+
 # Setup
 
 To start, download the example mod on the logos and decos mod page, and unzip it into an easy to use location. 
