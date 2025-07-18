@@ -9,6 +9,13 @@ Links to sections
 
 # Adding Custom Components
 
+To add a component, use the static method `LibraryOfStuff.AddNewComponent(Type component, Type builder)`
+Example
+```c#
+LibraryOfStuff.AddNewComponent(typeof(AttributeModifierComponent), typeof(AttributeModifierComponentBuilder));
+```
+
+## DEPRICATED, USE NEW FUNCTION
 To add a component, use the static method `LibraryOfStuff.AddNewComponent(Type baseClass, string typeIdentifier, Type type, IComponentBuilder builder)`   
 
 baseClass - typeof(Component)  
@@ -49,6 +56,7 @@ Now, inside the `Definitions` folder, create as many JSON files as you need (Eac
     "identifier": "DEFINITION TO EDIT",
     "CarType": "SET A NEW CAR TYPE HERE (OPTIONAL, LEAVE EMPTY TO KEEP THE SAME ONE)"
     "newIdentifier": "NEW DEFINITION'S ID (ONLY USED IF CLONING)",
+    "Archetype": 0, 
     "clone": true,
     "cloneDefault": false,
     "name": "DISPLAY NAME FOR THE ROLLING STOCK, LEAVE EMPTY TO KEEP THE CURRENT NAME (UNLESS CLONING)",
@@ -118,6 +126,27 @@ Whether or not to use the unedited base game definition, or to use the potential
 ## CarType (Optional, default = "")
 
 What the cartype should be changed to, leave blank if you don't want to change it
+
+## Archetype (Optional, default = null, Only add this if you need too)
+
+What the Archetype should be. values are based on the index of the type in this list, starting at 0 (EG, Coach would be `"Archetype": 10`, or a Steam Engine would be `"Archetype": 2`
+```c#
+public enum CarArchetype
+{
+	Uncategorized,
+	LocomotiveDiesel,
+	LocomotiveSteam,
+	Boxcar,
+	Flat,
+	Tank,
+	HopperOpen,
+	Caboose,
+	Tender,
+	Gondola,
+	Coach,
+	Baggage
+}
+```
 
 ## name (Optional, Required if cloning)
 
